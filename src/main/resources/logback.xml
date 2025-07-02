@@ -1,0 +1,20 @@
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Root log level -->
+  <root level="INFO">
+    <appender-ref ref="STDOUT"/>
+  </root>
+
+  <!-- Suppress noisy DEBUG logs -->
+  <logger name="org.apache.hc" level="WARN"/>
+  <logger name="org.apache.iceberg" level="INFO"/>
+  <logger name="org.eclipse.jetty" level="WARN"/>
+  <logger name="com.fasterxml.jackson" level="WARN"/>
+
+</configuration>
